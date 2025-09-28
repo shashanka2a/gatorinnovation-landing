@@ -1,7 +1,11 @@
+"use client";
+
 import { Button } from "./ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { useState } from "react";
 
 export default function Hero() {
+  const [selectedPlan, setSelectedPlan] = useState("full-app");
   return (
     <section className="pt-32 pb-20 px-6 bg-[#F9FAFB]">
       <div className="max-w-7xl mx-auto text-center">
@@ -21,12 +25,24 @@ export default function Hero() {
         </p>
         
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
-          <Card className="relative bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-0 hover:-translate-y-1">
+          <Card 
+            className={`relative bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:-translate-y-1 ${
+              selectedPlan === "landing" 
+                ? "border-2 border-[#6366F1] ring-2 ring-[#6366F1]/20" 
+                : "border-0"
+            }`}
+            onClick={() => setSelectedPlan("landing")}
+          >
             <CardHeader className="text-center pb-4">
               <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-xl mb-4 mx-auto">
                 <span className="text-2xl">🚀</span>
               </div>
               <CardTitle className="text-2xl text-gray-900">Landing Page</CardTitle>
+              {selectedPlan === "landing" && (
+                <div className="inline-flex items-center bg-[#6366F1] text-white px-3 py-1 rounded-full text-sm font-medium mt-2">
+                  ✓ Selected
+                </div>
+              )}
               <div className="flex items-baseline justify-center gap-1 mb-2">
                 <span className="text-gray-500">starts from</span>
                 <span className="text-4xl font-bold text-[#6366F1]">$500</span>
@@ -57,7 +73,14 @@ export default function Hero() {
             </CardContent>
           </Card>
           
-          <Card className="relative bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-[#6366F1] hover:-translate-y-1">
+          <Card 
+            className={`relative bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:-translate-y-1 ${
+              selectedPlan === "full-app" 
+                ? "border-2 border-[#6366F1] ring-2 ring-[#6366F1]/20" 
+                : "border-2 border-[#6366F1]"
+            }`}
+            onClick={() => setSelectedPlan("full-app")}
+          >
             <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
               <span className="bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white px-4 py-1 rounded-full text-sm font-medium">
                 Most Popular
@@ -68,6 +91,11 @@ export default function Hero() {
                 <span className="text-2xl">💻</span>
               </div>
               <CardTitle className="text-2xl text-gray-900">Full Application</CardTitle>
+              {selectedPlan === "full-app" && (
+                <div className="inline-flex items-center bg-[#6366F1] text-white px-3 py-1 rounded-full text-sm font-medium mt-2">
+                  ✓ Selected
+                </div>
+              )}
               <div className="flex items-baseline justify-center gap-1 mb-2">
                 <span className="text-gray-500">starts from</span>
                 <span className="text-4xl font-bold text-[#6366F1]">$2,500</span>
@@ -102,7 +130,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a href="https://app.gatorinnovation.com" target="_blank" rel="noopener noreferrer">
             <Button className="bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white text-lg px-8 py-6 rounded-xl hover:opacity-90 transition-opacity shadow-lg">
-              Start your project →
+              {selectedPlan === "landing" ? "Start Landing Page Project →" : "Start Full App Project →"}
             </Button>
           </a>
           <a href="#work" className="text-gray-600 hover:text-[#6366F1] transition-colors flex items-center gap-2">
