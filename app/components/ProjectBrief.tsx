@@ -226,7 +226,7 @@ Date: ${new Date().toLocaleDateString()}
               <h3 className="text-lg font-semibold text-green-800 mb-2">Next Steps</h3>
               <p className="text-green-700 mb-4">
                 Your project brief has been sent to our development team. 
-                We'll review your requirements and get back to you within 24 hours with a detailed proposal.
+                We&apos;ll review your requirements and get back to you within 24 hours with a detailed proposal.
               </p>
               <div className="flex items-center justify-center gap-2 text-sm text-green-600">
                 <CheckCircle className="w-4 h-4" />
