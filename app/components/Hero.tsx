@@ -1,0 +1,115 @@
+import { Button } from "./ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+
+export default function Hero() {
+  return (
+    <section className="pt-32 pb-20 px-6 bg-[#F9FAFB]">
+      <div className="max-w-7xl mx-auto text-center">
+        <div className="inline-flex items-center bg-white rounded-full px-4 py-2 mb-6 shadow-sm">
+          <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+          <span className="text-sm text-gray-600">Available for new projects</span>
+        </div>
+        
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+          Build your <span className="bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] bg-clip-text text-transparent">MVP fast</span>
+        </h1>
+        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+          Landing pages in 2 days or full apps in 1 week. Simple scope, great UX.
+        </p>
+        <p className="text-sm text-gray-500 mb-12 max-w-xl mx-auto">
+          Trusted by 50+ student entrepreneurs at University of Florida
+        </p>
+        
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
+          <Card className="relative bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-0 hover:-translate-y-1">
+            <CardHeader className="text-center pb-4">
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-xl mb-4 mx-auto">
+                <span className="text-2xl">🚀</span>
+              </div>
+              <CardTitle className="text-2xl text-gray-900">Landing Page</CardTitle>
+              <div className="flex items-baseline justify-center gap-1 mb-2">
+                <span className="text-4xl font-bold text-[#6366F1]">$500</span>
+                <span className="text-gray-500">fixed</span>
+              </div>
+              <div className="inline-flex items-center bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm font-medium">
+                Ready in 2 days
+              </div>
+            </CardHeader>
+            <CardContent className="text-center">
+              <ul className="text-gray-600 space-y-3 mb-6 text-left">
+                <li className="flex items-center gap-3">
+                  <div className="w-1.5 h-1.5 bg-[#6366F1] rounded-full"></div>
+                  Modern responsive design
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-1.5 h-1.5 bg-[#6366F1] rounded-full"></div>
+                  SEO optimized
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-1.5 h-1.5 bg-[#6366F1] rounded-full"></div>
+                  Contact forms
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-1.5 h-1.5 bg-[#6366F1] rounded-full"></div>
+                  2 revisions included
+                </li>
+              </ul>
+            </CardContent>
+          </Card>
+          
+          <Card className="relative bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-[#6366F1] hover:-translate-y-1">
+            <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+              <span className="bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white px-4 py-1 rounded-full text-sm font-medium">
+                Most Popular
+              </span>
+            </div>
+            <CardHeader className="text-center pb-4 pt-8">
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-100 rounded-xl mb-4 mx-auto">
+                <span className="text-2xl">💻</span>
+              </div>
+              <CardTitle className="text-2xl text-gray-900">Full Application</CardTitle>
+              <div className="flex items-baseline justify-center gap-1 mb-2">
+                <span className="text-4xl font-bold text-[#6366F1]">$2,500</span>
+                <span className="text-gray-500">fixed</span>
+              </div>
+              <div className="inline-flex items-center bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">
+                Ready in 1 week
+              </div>
+            </CardHeader>
+            <CardContent className="text-center">
+              <ul className="text-gray-600 space-y-3 mb-6 text-left">
+                <li className="flex items-center gap-3">
+                  <div className="w-1.5 h-1.5 bg-[#6366F1] rounded-full"></div>
+                  Custom web application
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-1.5 h-1.5 bg-[#6366F1] rounded-full"></div>
+                  User authentication
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-1.5 h-1.5 bg-[#6366F1] rounded-full"></div>
+                  Database integration
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-1.5 h-1.5 bg-[#6366F1] rounded-full"></div>
+                  Unlimited revisions
+                </li>
+              </ul>
+            </CardContent>
+          </Card>
+        </div>
+        
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="https://app.gatorinnovation.com" target="_blank" rel="noopener noreferrer">
+            <Button className="bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white text-lg px-8 py-6 rounded-xl hover:opacity-90 transition-opacity shadow-lg">
+              Start your project →
+            </Button>
+          </a>
+          <a href="#work" className="text-gray-600 hover:text-[#6366F1] transition-colors flex items-center gap-2">
+            See our work <span>↓</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
