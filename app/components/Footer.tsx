@@ -12,7 +12,7 @@ export default function Footer() {
               <span className="text-xl font-semibold text-white">gatorinnovation</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Empowering student entrepreneurs with fast, affordable web solutions. 
+              Empowering entrepreneurs and small businesses with fast, affordable web solutions. 
               From MVPs to full applications, we bring your ideas to life.
             </p>
             <div className="flex items-center gap-2 text-gray-300 mb-4">
