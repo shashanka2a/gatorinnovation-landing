@@ -41,6 +41,8 @@ export const metadata: Metadata = {
     title: 'GatorInnovation - Build your MVP fast',
     description: 'Landing pages in 2 days or full apps in 1 week. Simple scope, great UX.',
     images: ['/og-image.jpg'],
+    creator: '@gatorinnovation',
+    site: '@gatorinnovation',
   },
   robots: {
     index: true,

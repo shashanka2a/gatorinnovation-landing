@@ -1,4 +1,4 @@
-import { Lightbulb } from "lucide-react";
+import { Lightbulb, Twitter, Instagram } from "lucide-react";
 import { Button } from "./ui/button";
 
 export default function Footer() {
@@ -15,9 +15,29 @@ export default function Footer() {
               Empowering student entrepreneurs with fast, affordable web solutions. 
               From MVPs to full applications, we bring your ideas to life.
             </p>
-            <div className="flex items-center gap-2 text-gray-300">
+            <div className="flex items-center gap-2 text-gray-300 mb-4">
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
               <span className="text-sm">Available for new projects</span>
+            </div>
+            <div className="flex items-center gap-4">
+              <a 
+                href="https://twitter.com/gatorinnovation" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
+              >
+                <Twitter className="w-5 h-5" />
+                <span className="text-sm">@gatorinnovation</span>
+              </a>
+              <a 
+                href="https://instagram.com/gatorinnovation" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
+              >
+                <Instagram className="w-5 h-5" />
+                <span className="text-sm">@gatorinnovation</span>
+              </a>
             </div>
           </div>
           
