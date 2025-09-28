@@ -228,9 +228,22 @@ Date: ${new Date().toLocaleDateString()}
                 Your project brief has been sent to our development team. 
                 We&apos;ll review your requirements and get back to you within 24 hours with a detailed proposal.
               </p>
-              <div className="flex items-center justify-center gap-2 text-sm text-green-600">
+              <div className="flex items-center justify-center gap-2 text-sm text-green-600 mb-4">
                 <CheckCircle className="w-4 h-4" />
                 <span>Project brief confirmed and submitted</span>
+              </div>
+              
+              {/* Admin Dashboard Link */}
+              <div className="border-t border-green-200 pt-4 mt-4">
+                <p className="text-sm text-green-600 mb-2">For development team access:</p>
+                <a 
+                  href="https://app.gatorinnovation.com/admin" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm text-green-700 hover:text-green-800 underline"
+                >
+                  Access Admin Dashboard →
+                </a>
               </div>
             </div>
           </CardContent>
