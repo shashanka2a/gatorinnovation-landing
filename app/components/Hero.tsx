@@ -128,7 +128,7 @@ export default function Hero() {
         </div>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a href="https://app.gatorinnovation.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://gatorinnovation.com/app" target="_blank" rel="noopener noreferrer">
             <Button className="bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white text-lg px-8 py-6 rounded-xl hover:opacity-90 transition-opacity shadow-lg">
               {selectedPlan === "landing" ? "Start Landing Page Project →" : "Start Full App Project →"}
             </Button>

@@ -237,7 +237,7 @@ Date: ${new Date().toLocaleDateString()}
               <div className="border-t border-green-200 pt-4 mt-4">
                 <p className="text-sm text-green-600 mb-2">For development team access:</p>
                 <a 
-                  href="https://app.gatorinnovation.com/admin" 
+                  href="https://gatorinnovation.com/admin" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm text-green-700 hover:text-green-800 underline"
