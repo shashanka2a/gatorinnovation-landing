@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
+import Image from "next/image";
 
 const projects = [
   {
@@ -10,7 +10,8 @@ const projects = [
     category: "Marketplace",
     description: "Marketplace for UF students",
     url: "gatorex.shop",
-    image: "https://images.unsplash.com/photo-1619462729211-c8fd019ceae3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYXJrZXRwbGFjZSUyMGFwcCUyMGludGVyZmFjZSUyMHN0dWRlbnR8ZW58MXx8fHwxNzU5MDMwMTE4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+    image: "/gatorex.png",
+    alt: "GatorEx marketplace application interface"
   },
   {
     id: "rydify",
@@ -18,7 +19,8 @@ const projects = [
     category: "Ride Sharing",
     description: "Split ride costs effortlessly",
     url: "rydify.co",
-    image: "https://images.unsplash.com/photo-1528033978085-52f315289665?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxyaWRlJTIwc2hhcmluZyUyMG1vYmlsZSUyMGFwcHxlbnwxfHx8fDE3NTkwMzAxMTd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+    image: "/rydify.png",
+    alt: "Rydify ride sharing application interface"
   },
   {
     id: "vybr",
@@ -26,7 +28,8 @@ const projects = [
     category: "Housing Platform",
     description: "Discover your dream housing",
     url: "vybr.club",
-    image: "https://images.unsplash.com/photo-1631799200294-0f1212ae90f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxob3VzaW5nJTIwcGxhdGZvcm0lMjB3ZWJzaXRlJTIwbW9kZXJufGVufDF8fHx8MTc1OTAzMDExOHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+    image: "/vybr.png",
+    alt: "Vybr housing platform interface"
   }
 ];
 
@@ -44,11 +47,14 @@ export default function OurWork() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <Card key={project.id} className="bg-white rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all border-0 overflow-hidden">
-              <div className="aspect-video overflow-hidden">
-                <ImageWithFallback
+              <div className="aspect-video overflow-hidden relative">
+                <Image
                   src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover"
+                  alt={project.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority={false}
                 />
               </div>
               <CardHeader className="pb-4">
