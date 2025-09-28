@@ -28,8 +28,8 @@ export default function Hero() {
               </div>
               <CardTitle className="text-2xl text-gray-900">Landing Page</CardTitle>
               <div className="flex items-baseline justify-center gap-1 mb-2">
-                <span className="text-4xl font-bold text-[#6366F1]">$500</span>
                 <span className="text-gray-500">starts from</span>
+                <span className="text-4xl font-bold text-[#6366F1]">$500</span>
               </div>
               <div className="inline-flex items-center bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm font-medium">
                 Ready in 2 days
@@ -69,8 +69,8 @@ export default function Hero() {
               </div>
               <CardTitle className="text-2xl text-gray-900">Full Application</CardTitle>
               <div className="flex items-baseline justify-center gap-1 mb-2">
-                <span className="text-4xl font-bold text-[#6366F1]">$2,500</span>
                 <span className="text-gray-500">starts from</span>
+                <span className="text-4xl font-bold text-[#6366F1]">$2,500</span>
               </div>
               <div className="inline-flex items-center bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">
                 Ready in 1 week
