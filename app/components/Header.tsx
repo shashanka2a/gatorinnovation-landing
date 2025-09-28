@@ -1,6 +1,6 @@
 "use client";
 
-import { Lightbulb, Sprout, Menu, X } from "lucide-react";
+import { Lightbulb, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "./ui/button";
 
@@ -12,10 +12,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="flex items-center space-x-1">
-              <Lightbulb className="w-6 h-6 text-[#6366F1]" />
-              <Sprout className="w-6 h-6 text-[#10B981]" />
-            </div>
+            <Lightbulb className="w-6 h-6 text-[#6366F1]" />
             <span className="text-xl font-semibold text-gray-900">gatorinnovation</span>
           </div>
           

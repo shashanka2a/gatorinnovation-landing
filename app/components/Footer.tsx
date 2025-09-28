@@ -1,4 +1,4 @@
-import { Lightbulb, Sprout } from "lucide-react";
+import { Lightbulb } from "lucide-react";
 import { Button } from "./ui/button";
 
 export default function Footer() {
@@ -8,10 +8,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div className="col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="flex items-center space-x-1">
-                <Lightbulb className="w-6 h-6 text-[#6366F1]" />
-                <Sprout className="w-6 h-6 text-[#10B981]" />
-              </div>
+              <Lightbulb className="w-6 h-6 text-[#6366F1]" />
               <span className="text-xl font-semibold text-white">gatorinnovation</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
