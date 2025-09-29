@@ -1,12 +1,9 @@
 import { NextResponse } from 'next/server';
-import { getTeamMembers } from '../../../lib/airtable';
 
+// NOTE: Airtable disabled. Return static team members.
 export async function GET() {
-  try {
-    const teamMembers = await getTeamMembers();
-    return NextResponse.json(teamMembers);
-  } catch (error: any) {
-    console.error('API Error fetching team members:', error);
-    return NextResponse.json({ message: error.message || 'Failed to fetch team members' }, { status: 500 });
-  }
+  const teamMembers = [
+    { id: '1', name: 'Shashank Jagannatham', role: 'Founder', bio: 'Product + Engineering', email: 'hello@gatorinnovation.com', active: true, order: 1 },
+  ];
+  return NextResponse.json(teamMembers);
 }

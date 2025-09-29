@@ -1,3 +1,4 @@
+"use client";
 import { Lightbulb, Twitter, Instagram } from "lucide-react";
 import { Button } from "./ui/button";
 
