@@ -62,14 +62,14 @@ export default function CustomPricing({ open, onOpenChange }: CustomPricingProps
 
   return (
     <Dialog open={open} onOpenChange={(o) => (o ? onOpenChange(o) : close())}>
-      <DialogContent className="max-w-3xl w-full rounded-2xl p-0 overflow-hidden">
-        <DialogHeader className="px-6 pt-6">
+      <DialogContent className="w-full max-w-[min(100vw,48rem)] sm:rounded-2xl rounded-none p-0 overflow-hidden">
+        <DialogHeader className="px-4 sm:px-6 pt-4 sm:pt-6">
           <DialogTitle className="text-2xl font-bold text-gray-900">
             Customize Your Plan
           </DialogTitle>
         </DialogHeader>
 
-        <div className="px-6 pb-6">
+        <div className="px-4 sm:px-6 pb-24 sm:pb-6">{/* extra bottom space for sticky mobile footer */}
           <ProgressStep step={step} />
 
           {step === 1 && (
@@ -172,31 +172,35 @@ export default function CustomPricing({ open, onOpenChange }: CustomPricingProps
             </div>
           )}
 
-          <div className="mt-8 flex items-center justify-between">
-            <div className="text-sm text-gray-500">Step {step} of 4</div>
-            <div className="flex gap-3">
-              <Button
-                variant="secondary"
-                className="rounded-xl"
-                onClick={() => (step === 1 ? close() : setStep((s) => Math.max(1, s - 1)))}
-              >
-                Back
-              </Button>
-              {step < 4 ? (
-                <Button
-                  className="bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white rounded-xl shadow-lg hover:-translate-y-0.5 transition-transform"
-                  onClick={() => setStep((s) => Math.min(4, s + 1))}
-                  disabled={step === 1 && !projectType}
-                >
-                  Continue
-                </Button>
-              ) : (
-                <a href="https://airtable.com/appHLFreu9qL45DYg/pagzfbeOyZFOWDMmt/form" target="_blank" rel="noopener noreferrer">
-                  <Button className="bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white rounded-xl shadow-lg hover:-translate-y-0.5 transition-transform">
-                    Get Started Today
+          <div className="sm:mt-8 sm:static fixed left-0 right-0 bottom-0 sm:left-auto sm:right-auto sm:bottom-auto">
+            <div className="sm:bg-transparent bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/70 sm:backdrop-blur-0 sm:border-0 border-t">
+              <div className="px-4 sm:px-0 py-3 sm:py-0 flex items-center justify-between gap-3">
+                <div className="text-xs sm:text-sm text-gray-500">Step {step} of 4</div>
+                <div className="flex gap-3 w-full sm:w-auto justify-end">
+                  <Button
+                    variant="secondary"
+                    className="rounded-xl w-full sm:w-auto"
+                    onClick={() => (step === 1 ? close() : setStep((s) => Math.max(1, s - 1)))}
+                  >
+                    Back
                   </Button>
-                </a>
-              )}
+                  {step < 4 ? (
+                    <Button
+                      className="bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white rounded-xl shadow-lg hover:-translate-y-0.5 transition-transform w-full sm:w-auto"
+                      onClick={() => setStep((s) => Math.min(4, s + 1))}
+                      disabled={step === 1 && !projectType}
+                    >
+                      Continue
+                    </Button>
+                  ) : (
+                    <a href="https://airtable.com/appHLFreu9qL45DYg/pagzfbeOyZFOWDMmt/form" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                      <Button className="w-full sm:w-auto bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white rounded-xl shadow-lg hover:-translate-y-0.5 transition-transform">
+                        Get Started Today
+                      </Button>
+                    </a>
+                  )}
+                </div>
+              </div>
             </div>
           </div>
         </div>
