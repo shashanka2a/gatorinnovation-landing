@@ -22,7 +22,7 @@ export default function Header() {
             <a href="#services" className="text-gray-700 hover:text-[#6366F1] transition-colors">Services</a>
             <a href="#process" className="text-gray-700 hover:text-[#6366F1] transition-colors">Process</a>
             <a href="#contact" className="text-gray-700 hover:text-[#6366F1] transition-colors">Contact</a>
-            <a href="https://app.gatorinnovation.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://airtable.com/appHLFreu9qL45DYg/pagzfbeOyZFOWDMmt/form" target="_blank" rel="noopener noreferrer">
               <Button size="sm" className="bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white rounded-lg">
                 Get Started
               </Button>
@@ -51,7 +51,7 @@ export default function Header() {
               <a href="#services" className="text-gray-700 hover:text-[#6366F1] transition-colors py-2">Services</a>
               <a href="#process" className="text-gray-700 hover:text-[#6366F1] transition-colors py-2">Process</a>
               <a href="#contact" className="text-gray-700 hover:text-[#6366F1] transition-colors py-2">Contact</a>
-              <a href="https://app.gatorinnovation.com" target="_blank" rel="noopener noreferrer" className="pt-2">
+              <a href="https://airtable.com/appHLFreu9qL45DYg/pagzfbeOyZFOWDMmt/form" target="_blank" rel="noopener noreferrer" className="pt-2">
                 <Button className="w-full bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white rounded-lg">
                   Get Started
                 </Button>
