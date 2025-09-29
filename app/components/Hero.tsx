@@ -4,10 +4,12 @@ import { Button } from "./ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { useState } from "react";
 import CustomPricing from "./CustomPricing";
+import AirtableFormDialog from "./AirtableFormDialog";
 
 export default function Hero() {
   const [selectedPlan, setSelectedPlan] = useState("full-app");
   const [customOpen, setCustomOpen] = useState(false);
+  const [formOpen, setFormOpen] = useState(false);
   return (
     <section className="pt-32 pb-20 px-6 bg-[#F9FAFB]">
       <div className="max-w-7xl mx-auto text-center">
@@ -168,16 +170,15 @@ export default function Hero() {
         </div>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a href="https://gatorinnovation.com/app" target="_blank" rel="noopener noreferrer">
-            <Button className="bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white text-lg px-8 py-6 rounded-xl hover:opacity-90 transition-opacity shadow-lg">
-              {selectedPlan === "landing" ? "Start Landing Page Project →" : "Start Full App Project →"}
-            </Button>
-          </a>
+          <Button onClick={() => setFormOpen(true)} className="bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white text-lg px-8 py-6 rounded-xl hover:opacity-90 transition-opacity shadow-lg">
+            {selectedPlan === "landing" ? "Start Landing Page Project →" : "Start Full App Project →"}
+          </Button>
           <a href="#work" className="text-gray-600 hover:text-[#6366F1] transition-colors flex items-center gap-2">
             See our work <span>↓</span>
           </a>
         </div>
         <CustomPricing open={customOpen} onOpenChange={setCustomOpen} />
+        <AirtableFormDialog open={formOpen} onOpenChange={setFormOpen} />
       </div>
     </section>
   );

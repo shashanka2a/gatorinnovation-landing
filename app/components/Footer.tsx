@@ -99,11 +99,11 @@ export default function Footer() {
               Student Innovation Hub • University of Florida
             </p>
           </div>
-          <a href="https://app.gatorinnovation.com" target="_blank" rel="noopener noreferrer">
+          <button onClick={() => window.dispatchEvent(new CustomEvent("open-airtable-form"))}>
             <Button className="bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white rounded-lg hover:opacity-90 transition-opacity px-6 py-3">
               Get Started Today →
             </Button>
-          </a>
+          </button>
         </div>
       </div>
     </footer>
