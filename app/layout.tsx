@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: 'GatorInnovation',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/opengraph-image',
         width: 1200,
         height: 630,
         alt: 'GatorInnovation - Build your MVP fast',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'GatorInnovation - Build your MVP fast',
     description: 'Landing pages in 2 days or full apps in 1 week. Simple scope, great UX.',
-    images: ['/og-image.jpg'],
+    images: ['/twitter-image'],
     creator: '@gatorinnovation',
     site: '@gatorinnovation',
   },
