@@ -100,11 +100,11 @@ export default function Footer() {
               Student Innovation Hub • University of Florida
             </p>
           </div>
-          <button onClick={() => window.dispatchEvent(new CustomEvent("open-airtable-form"))}>
+          <a href="https://airtable.com/appHLFreu9qL45DYg/pagzfbeOyZFOWDMmt/form" target="_blank" rel="noopener noreferrer">
             <Button className="bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white rounded-lg hover:opacity-90 transition-opacity px-6 py-3">
               Get Started Today →
             </Button>
-          </button>
+          </a>
         </div>
       </div>
     </footer>

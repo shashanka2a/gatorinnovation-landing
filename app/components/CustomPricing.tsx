@@ -191,9 +191,11 @@ export default function CustomPricing({ open, onOpenChange }: CustomPricingProps
                   Continue
                 </Button>
               ) : (
-                <Button className="bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white rounded-xl shadow-lg hover:-translate-y-0.5 transition-transform" onClick={() => window.dispatchEvent(new CustomEvent("open-airtable-form"))}>
-                  Get Started Today
-                </Button>
+                <a href="https://airtable.com/appHLFreu9qL45DYg/pagzfbeOyZFOWDMmt/form" target="_blank" rel="noopener noreferrer">
+                  <Button className="bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white rounded-xl shadow-lg hover:-translate-y-0.5 transition-transform">
+                    Get Started Today
+                  </Button>
+                </a>
               )}
             </div>
           </div>
