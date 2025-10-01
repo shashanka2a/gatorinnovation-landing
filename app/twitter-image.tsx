@@ -17,7 +17,12 @@ export default function TwitterImage() {
           background: 'linear-gradient(135deg, #F9FAFB 0%, #EEF2FF 100%)',
         }}
       >
-        <div>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+          }}
+        >
           <div style={{ fontSize: 60, fontWeight: 800, color: '#0F172A' }}>GatorInnovation</div>
           <div style={{ fontSize: 28, color: '#475569', marginTop: 12 }}>Build your MVP fast</div>
         </div>
