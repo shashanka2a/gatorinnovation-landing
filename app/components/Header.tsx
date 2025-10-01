@@ -20,8 +20,6 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-8">
             <a href="#work" className="text-gray-700 hover:text-[#6366F1] transition-colors">Our Work</a>
             <a href="#services" className="text-gray-700 hover:text-[#6366F1] transition-colors">Services</a>
-            <a href="#process" className="text-gray-700 hover:text-[#6366F1] transition-colors">Process</a>
-            <a href="#contact" className="text-gray-700 hover:text-[#6366F1] transition-colors">Contact</a>
             <a href="https://airtable.com/appHLFreu9qL45DYg/pagzfbeOyZFOWDMmt/form" target="_blank" rel="noopener noreferrer">
               <Button size="sm" className="bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white rounded-lg">
                 Get Started
@@ -49,8 +47,6 @@ export default function Header() {
             <div className="flex flex-col space-y-4 px-6">
               <a href="#work" className="text-gray-700 hover:text-[#6366F1] transition-colors py-2">Our Work</a>
               <a href="#services" className="text-gray-700 hover:text-[#6366F1] transition-colors py-2">Services</a>
-              <a href="#process" className="text-gray-700 hover:text-[#6366F1] transition-colors py-2">Process</a>
-              <a href="#contact" className="text-gray-700 hover:text-[#6366F1] transition-colors py-2">Contact</a>
               <a href="https://airtable.com/appHLFreu9qL45DYg/pagzfbeOyZFOWDMmt/form" target="_blank" rel="noopener noreferrer" className="pt-2">
                 <Button className="w-full bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white rounded-lg">
                   Get Started

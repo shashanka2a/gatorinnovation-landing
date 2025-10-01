@@ -84,7 +84,6 @@ export default function Footer() {
               <li className="pt-2">
                 <div className="text-sm">
                   <div>hello@gatorinnovation.com</div>
-                  <div>(555) 123-INNOVATE</div>
                 </div>
               </li>
             </ul>
@@ -97,7 +96,7 @@ export default function Footer() {
               © 2025 GatorInnovation. All rights reserved.
             </p>
             <p className="text-gray-500 text-xs mt-1">
-              Student Innovation Hub • University of Florida
+              Student Innovation Hub
             </p>
           </div>
           <a href="https://airtable.com/appHLFreu9qL45DYg/pagzfbeOyZFOWDMmt/form" target="_blank" rel="noopener noreferrer">
